@@ -1,0 +1,113 @@
+/* .App {
+  text-align: center;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  background-color: #b9b3b7;
+  padding: 5px 0px;
+}
+.header a{
+  color: rgb(15, 15, 15);
+  text-decoration: none;
+}
+.register{
+  text-align:center;
+}
+/* .register input{
+   display:block; 
+} */
+/* .btn-clr{
+  background-color: #535253;
+  color:#b9b3b7;
+}
+.error-notice{
+  color:rgb(221, 164, 57)
+} */ 
+.App {
+  text-align: center;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  background-color: #b9b3b7;
+  padding: 5px 0px;
+}
+.header a{
+  color: rgb(15, 15, 15);
+  text-decoration: none;
+}
+.register{
+  text-align:center;
+}
+/* .register input{
+   display:block; 
+} */
+.btn-clr{
+  background-color: #535253;
+  color:#b9b3b7;
+}
+.error-notice{
+  color:rgb(221, 164, 57)
+}
+
+/* vertical menu */
+.vertical-menu {
+  /* width: 200px;  */
+  /* Set a width if you like */
+  height: 100%;
+  /* height: calc(100vh - 54px);  */
+  
+  
+}
+
+.vertical-menu a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+  background-color: #383d39; /* Add a green color to the "active/current" link */
+  color: white;
+}
+
+/* end of menu */
+
+h3{
+  padding-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
