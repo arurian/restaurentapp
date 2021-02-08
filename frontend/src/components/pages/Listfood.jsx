@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import UserContext from '../../context/userContext';
 
 import axios from 'axios';
@@ -97,12 +97,17 @@ console.log("posts------"+data.posts)
     //     <li>{myList}</li>  
     // ); 
     const foodlist = data.posts;
-     
+    const setwidth = {
+        width:'60%',
+        marginTop:'20px'
+    };
       if (load) {
         return (
-            <div> 
-               
-                    <p>Food List</p>
+            <div className="container">
+             {userData.user ? (
+               <>
+               <div style={ setwidth }>
+                    <h2>Food List</h2>
                     
                     <ul>                  
                     
@@ -123,6 +128,8 @@ console.log("posts------"+data.posts)
                             
                             <th scope="col">Food Name</th>
                             <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Description</th>
                                                    
                             </tr>
                     </thead>
@@ -133,23 +140,26 @@ console.log("posts------"+data.posts)
                         
                         <td>{item.foodname}</td>
                         <td>{item.foodprice}</td>
+                        <td>{item.foodqty}</td>
+                        <td>{item.fooddesc}</td>
                        
                         </tr>
                      )              
-                    }
-                    {/* <tr>
-                <th scope="row">1</th>
-                    <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        </tr> */}
-                           
+                    }                                    
                         
                     </tbody>
-                </table>
-                                    
+                </table>                       
 
-            </div>
+                </div>
+             </>
+             ) : (
+                 <>
+                     <h2>You are not logged in</h2>
+                     <Link to="/login">Login</Link>
+                 </>
+             )}
+
+             </div>
         );
 
     } else {
